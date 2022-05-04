@@ -4,11 +4,11 @@ This repository is the work of "A Histogram-Driven Generative Adversarial Networ
 
 Note that, the HisGAN model in `models` file will open when the paper is accept.
 
-You could click the link to access the [paper](https://arxiv.org/). The multimodal FeTS dataset could be acquired from [here](https://www.med.upenn.edu/sbia/brats2018.html).
+You could click the link to access the [paper](https://arxiv.org/). The multimodal FeTS dataset could be acquired from [here](https://github.com/FETS-AI/Challenge).
 
 
 <div  align="center">  
- <img src="https://github.com/JalexDooo/HisGAN/tree/main/prepare/figure.pdf"
+ <img src="https://github.com/JalexDooo/HisGAN/tree/main/prepare/figure.png"
      align=center/>
 </div>
 
