@@ -7,12 +7,12 @@ Note that, the HisGAN model in `models` file will open when the paper is accept.
 You could click the link to access the [paper](https://arxiv.org/). The multimodal FeTS dataset could be acquired from [here](https://www.med.upenn.edu/sbia/brats2018.html).
 
 
-<!-- <div  align="center">  
- <img src="https://github.com/China-LiuXiaopeng/BraTS-DMFNet/blob/master/fig/Architecture.jpg"
+<div  align="center">  
+ <img src="https://github.com/JalexDooo/HisGAN/prepare/figure.pdf"
      align=center/>
-</div> --> -->
+</div>
 
- <!-- <center>Architecture of 3D DMFNet</center>
+<center>The performance of HisGAN</center>
 
 
 ## Requirements
