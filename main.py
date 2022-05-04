@@ -122,12 +122,12 @@ if __name__ == '__main__':
 
 """
 # train multi-gpu T1->T2 && Flair->T1ce
-cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='CycleGANModel' --A='t1' --B='t2'
-cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='CycleGANModel' --A='flair' --B='t1ce'
+cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='ResCycleGANModel' --A='t1' --B='t2'
+cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='ResCycleGANModel' --A='flair' --B='t1ce'
 cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='Pix2pix' --A='t1' --B='t2'
 cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='Pix2pix' --A='flair' --B='t1ce'
-cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='BiCycleGANModel' --A='t1' --B='t2'
-cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='BiCycleGANModel' --A='flair' --B='t1ce'
+cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='MultiCycleGANModel' --A='t1' --B='t2'
+cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='MultiCycleGANModel' --A='flair' --B='t1ce'
 cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='MedGANModel' --A='t1' --B='t2'
 cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='MedGANModel' --A='flair' --B='t1ce'
 cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='ARGANModel' --A='t1' --B='t2'
@@ -146,11 +146,11 @@ cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='HisG
 cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='HisGAN_EMANet_Histloss' --A='flair' --B='t1ce'
 
 # train multi-gpu MR->CT local host
-cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='CycleGANModel' --A='MR' --B='CT' --dataroot='/Users/jontysun/Downloads/数据集/Brain/' --batch_size=1 --gpu_ids=''
+cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='ResCycleGANModel' --A='MR' --B='CT' --dataroot='/Users/jontysun/Downloads/数据集/Brain/' --batch_size=1 --gpu_ids=''
 # in server cluster
-cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='CycleGANModel' --A='MR' --B='CT' --dataroot='/sunjindong/dataset/Brain' --load_iter=200 --n_epochs=20 --n_epochs_decay=20 --continue_train=True
+cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='ResCycleGANModel' --A='MR' --B='CT' --dataroot='/sunjindong/dataset/Brain' --load_iter=200 --n_epochs=20 --n_epochs_decay=20 --continue_train=True
 cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='Pix2pixModel' --A='MR' --B='CT' --dataroot='/sunjindong/dataset/Brain' --load_iter=200 --n_epochs=20 --n_epochs_decay=20 --continue_train=True
-cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='BiCycleGANModel' --A='MR' --B='CT' --dataroot='/sunjindong/dataset/Brain' --load_iter=200 --n_epochs=20 --n_epochs_decay=20 --continue_train=True
+cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='MultiCycleGANModel' --A='MR' --B='CT' --dataroot='/sunjindong/dataset/Brain' --load_iter=200 --n_epochs=20 --n_epochs_decay=20 --continue_train=True
 cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='MedGANModel' --A='MR' --B='CT' --dataroot='/sunjindong/dataset/Brain' --load_iter=200 --n_epochs=20 --n_epochs_decay=20 --continue_train=True
 cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='ARGANModel' --A='MR' --B='CT' --dataroot='/sunjindong/dataset/Brain' --load_iter=200 --n_epochs=20 --n_epochs_decay=20 --continue_train=True
 cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='HisGAN_Baseline' --A='MR' --B='CT' --dataroot='/sunjindong/dataset/Brain' --load_iter=200 --n_epochs=20 --n_epochs_decay=20 --continue_train=True
@@ -163,9 +163,9 @@ cd /sunjindong/TransforGAN_for_Medical && python3 -u main.py train --model='BiCy
 python3 main.py predict --gpu_ids='' --model='HisGAN_EMANet_Histloss' --A='t1' --B='t2' --load_iter=200 --dataroot='/Users/jontysun/Downloads/数据集/BrainT1T2FT/npyFTTTest'
 python3 main.py predict --gpu_ids='' --model='HisGAN_EMANet_Histloss' --A='flair' --B='t1ce' --load_iter=200 --dataroot='/Users/jontysun/Downloads/数据集/BrainT1T2FT/npyFTTTest'
 
-python3 main.py predict --gpu_ids='' --model='CycleGANModel' --A='MR' --B='CT' --dataroot='/Users/jontysun/Downloads/数据集/BrainTest' --load_iter=40
+python3 main.py predict --gpu_ids='' --model='ResCycleGANModel' --A='MR' --B='CT' --dataroot='/Users/jontysun/Downloads/数据集/BrainTest' --load_iter=40
 python3 main.py predict --gpu_ids='' --model='Pix2pixModel' --A='MR' --B='CT' --dataroot='/Users/jontysun/Downloads/数据集/BrainTest' --load_iter=40
-python3 main.py predict --gpu_ids='' --model='BiCycleGANModel' --A='MR' --B='CT' --dataroot='/Users/jontysun/Downloads/数据集/BrainTest' --load_iter=40
+python3 main.py predict --gpu_ids='' --model='MultiCycleGANModel' --A='MR' --B='CT' --dataroot='/Users/jontysun/Downloads/数据集/BrainTest' --load_iter=40
 python3 main.py predict --gpu_ids='' --model='MedGANModel' --A='MR' --B='CT' --dataroot='/Users/jontysun/Downloads/数据集/BrainTest' --load_iter=40
 python3 main.py predict --gpu_ids='' --model='ARGANModel' --A='MR' --B='CT' --dataroot='/Users/jontysun/Downloads/数据集/BrainTest' --load_iter=40
 python3 main.py predict --gpu_ids='' --model='HisGAN_Baseline' --A='MR' --B='CT' --dataroot='/Users/jontysun/Downloads/数据集/BrainTest' --load_iter=40

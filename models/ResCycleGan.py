@@ -285,7 +285,7 @@ class ImagePool():
         return return_images
 
 
-class CycleGANModel(BaseModel):
+class ResCycleGANModel(BaseModel):
     def __init__(self, conf):
         BaseModel.__init__(self, conf)
         self.loss_names = ['D_A', 'G_A', 'cycle_A', 'idt_A', 'D_B', 'G_B', 'cycle_B', 'idt_B']

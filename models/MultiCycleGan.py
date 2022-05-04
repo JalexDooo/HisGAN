@@ -63,7 +63,7 @@ class GANLoss(nn.Module):
         return total_loss, all_losses
 
 
-class BiCycleGANModel(BaseModel):
+class MultiCycleGANModel(BaseModel):
     def __init__(self, conf):
         BaseModel.__init__(self, conf)
         self.loss_names = ['G_GAN', 'D', 'G_GAN2', 'D2', 'G_L1', 'z_L1', 'kl']
