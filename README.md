@@ -6,15 +6,13 @@ Note that, the HisGAN model in `models` file will open when the paper is accept.
 
 You could click the link to access the [paper](https://arxiv.org/). The multimodal FeTS dataset could be acquired from [here](https://www.med.upenn.edu/sbia/brats2018.html).
 
-<!-- ## Dilated multi-fiber network -->
-
 
 <!-- <div  align="center">  
  <img src="https://github.com/China-LiuXiaopeng/BraTS-DMFNet/blob/master/fig/Architecture.jpg"
      align=center/>
-</div> -->
+</div> --> -->
 
- <!-- <center>Architecture of 3D DMFNet</center> -->
+ <!-- <center>Architecture of 3D DMFNet</center>
 
 
 ## Requirements
@@ -41,7 +39,7 @@ python3 -u main.py train --model='ResCycleGANModel' --A='t1' --B='t2'
 You could obtain the resutls as paper reported by running the following code:
 
 ```
-python3 main.py predict --gpu_ids='' --model='HisGAN_EMANet_Histloss' --A='t1' --B='t2' --load_iter=200 --dataroot='{your test set}}'
+python3 main.py predict --gpu_ids='' --model='HisGAN_EMANet_Histloss' --A='t1' --B='t2' --load_iter=200 --dataroot='{your test set}'
 ```
 Then make a submission to the online evaluation server.
 
