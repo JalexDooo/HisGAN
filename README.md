@@ -8,7 +8,7 @@ You could click the link to access the [paper](https://arxiv.org/). The multimod
 
 
 <div  align="center">  
- <img src="https://github.com/JalexDooo/HisGAN/prepare/figure.pdf"
+ <img src="https://github.com/JalexDooo/HisGAN/tree/main/prepare/figure.pdf"
      align=center/>
 </div>
 
